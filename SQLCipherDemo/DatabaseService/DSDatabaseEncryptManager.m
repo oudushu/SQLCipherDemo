@@ -49,16 +49,15 @@
  加密数据库（保留原有数据库）
  */
 + (BOOL)encryptDatabase:(NSString *)origPath toPath:(NSString *)toPath {
-    const char *sql = [[NSString stringWithFormat:@"ATTACH DATABASE '%@' AS encrypted KEY '%@';", toPath, kDatabaseEncryptKey] UTF8String];
     sqlite3 *db;
     if (sqlite3_open([origPath UTF8String], &db) == SQLITE_OK) {
-        char *errmsg = NULL;
-        sqlite3_exec(db, sql, NULL, NULL, &errmsg);
-        sqlite3_exec(db, "SELECT sqlcipher_export('encrypted');", NULL, NULL, &errmsg);
-        sqlite3_exec(db, "DETACH DATABASE encrypted;", NULL, NULL, &errmsg);
+        char *err = NULL;
+        sqlite3_exec(db, [[NSString stringWithFormat:@"ATTACH DATABASE '%@' AS encrypted KEY '%@';", toPath, kDatabaseEncryptKey] UTF8String], NULL, NULL, &err);
+        sqlite3_exec(db, "SELECT sqlcipher_export('encrypted');", NULL, NULL, &err);
+        sqlite3_exec(db, "DETACH DATABASE encrypted;", NULL, NULL, &err);
         sqlite3_close(db);
         
-        return errmsg ? NO : YES;
+        return err ? NO : YES;
     } else {
         sqlite3_close(db);
         NSLog(@"Open db failed:%s", sqlite3_errmsg(db));
@@ -70,18 +69,16 @@
  解密数据库（保留原有数据库）
  */
 + (BOOL)unencryptDatabase:(NSString *)origPath toPath:(NSString *)toPath {
-    const char *sql = [[NSString stringWithFormat:@"ATTACH DATABASE '%@' AS plaintext KEY '';", toPath] UTF8String];
-    
     sqlite3 *db;
     if (sqlite3_open([origPath UTF8String], &db) == SQLITE_OK) {
-        char *errmsg = NULL;
-        sqlite3_exec(db, [[NSString stringWithFormat:@"PRAGMA key = '%@';", kDatabaseEncryptKey] UTF8String], NULL, NULL, &errmsg);
-        sqlite3_exec(db, sql, NULL, NULL, NULL);
-        sqlite3_exec(db, "SELECT sqlcipher_export('plaintext');", NULL, NULL, &errmsg);
-        sqlite3_exec(db, "DETACH DATABASE plaintext;", NULL, NULL, &errmsg);
+        char *err = NULL;
+        sqlite3_exec(db, [[NSString stringWithFormat:@"PRAGMA key = '%@';", kDatabaseEncryptKey] UTF8String], NULL, NULL, &err);
+        sqlite3_exec(db, [[NSString stringWithFormat:@"ATTACH DATABASE '%@' AS plaintext KEY '';", toPath] UTF8String], NULL, NULL, NULL);
+        sqlite3_exec(db, "SELECT sqlcipher_export('plaintext');", NULL, NULL, &err);
+        sqlite3_exec(db, "DETACH DATABASE plaintext;", NULL, NULL, &err);
         sqlite3_close(db);
         
-        return errmsg ? NO : YES;
+        return err ? NO : YES;
     } else {
         sqlite3_close(db);
         NSLog(@"Open db failed:%s", sqlite3_errmsg(db));

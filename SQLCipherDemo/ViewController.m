@@ -140,17 +140,20 @@
     } else {
         param = @[@"unencrypt", @"小明", @10, @(111.11), @(123), @(123), [NSDate date], @NO];
     }
-    for (int i = 0; i < 10000; i++) {
-        if (isEncrypt) {
-            [self.encryptQueue inDatabase:^(FMDatabase *db) {
+    if (isEncrypt) {
+        [self.encryptQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+            for (int i = 0; i < 50000; i++) {
                 [db executeUpdate:sql withArgumentsInArray:param];
-            }];
-        } else {
-            [self.normalQueue inDatabase:^(FMDatabase *db) {
+            }
+        }];
+    } else {
+        [self.normalQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+            for (int i = 0; i < 50000; i++) {
                 [db executeUpdate:sql withArgumentsInArray:param];
-            }];
-        }
+            }
+        }];
     }
+
     NSLog(@"insert after %f", [[NSDate date] timeIntervalSince1970] - before);
 }
 
