@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324EA82FC77CC4AE4E6B3B64 /* libPods-SQLCipherDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A5FCE9682706CF2A9EC696 /* libPods-SQLCipherDemo.a */; };
 		A0558D911E8CA442008ECDB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0558D901E8CA442008ECDB7 /* main.m */; };
 		A0558D941E8CA442008ECDB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0558D931E8CA442008ECDB7 /* AppDelegate.m */; };
 		A0558D971E8CA442008ECDB7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0558D961E8CA442008ECDB7 /* ViewController.m */; };
 		A0558D9A1E8CA442008ECDB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0558D981E8CA442008ECDB7 /* Main.storyboard */; };
 		A0558D9C1E8CA442008ECDB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0558D9B1E8CA442008ECDB7 /* Assets.xcassets */; };
 		A0558D9F1E8CA442008ECDB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0558D9D1E8CA442008ECDB7 /* LaunchScreen.storyboard */; };
+		A0558DA91E8CA5C2008ECDB7 /* DSDatabaseEncryptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0558DA81E8CA5C2008ECDB7 /* DSDatabaseEncryptManager.m */; };
+		A0558DAC1E8CAB87008ECDB7 /* FMEncryptDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A0558DAB1E8CAB87008ECDB7 /* FMEncryptDatabaseQueue.m */; };
+		A0558DAF1E8CABAC008ECDB7 /* FMEncryptDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A0558DAE1E8CABAC008ECDB7 /* FMEncryptDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BD90BA83D7ED5831D3E2F48 /* Pods-SQLCipherDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLCipherDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQLCipherDemo/Pods-SQLCipherDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A0558D8C1E8CA442008ECDB7 /* SQLCipherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLCipherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0558D901E8CA442008ECDB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0558D921E8CA442008ECDB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,14 @@
 		A0558D9B1E8CA442008ECDB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0558D9E1E8CA442008ECDB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0558DA01E8CA442008ECDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0558DA71E8CA5C2008ECDB7 /* DSDatabaseEncryptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDatabaseEncryptManager.h; sourceTree = "<group>"; };
+		A0558DA81E8CA5C2008ECDB7 /* DSDatabaseEncryptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDatabaseEncryptManager.m; sourceTree = "<group>"; };
+		A0558DAA1E8CAB87008ECDB7 /* FMEncryptDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMEncryptDatabaseQueue.h; sourceTree = "<group>"; };
+		A0558DAB1E8CAB87008ECDB7 /* FMEncryptDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEncryptDatabaseQueue.m; sourceTree = "<group>"; };
+		A0558DAD1E8CABAC008ECDB7 /* FMEncryptDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMEncryptDatabase.h; sourceTree = "<group>"; };
+		A0558DAE1E8CABAC008ECDB7 /* FMEncryptDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEncryptDatabase.m; sourceTree = "<group>"; };
+		A9040D84860ABE5D6DC93EC8 /* Pods-SQLCipherDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLCipherDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SQLCipherDemo/Pods-SQLCipherDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F3A5FCE9682706CF2A9EC696 /* libPods-SQLCipherDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SQLCipherDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +46,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324EA82FC77CC4AE4E6B3B64 /* libPods-SQLCipherDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9729AADE0AAFE8B878F89A91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BD90BA83D7ED5831D3E2F48 /* Pods-SQLCipherDemo.debug.xcconfig */,
+				A9040D84860ABE5D6DC93EC8 /* Pods-SQLCipherDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A0558D831E8CA442008ECDB7 = {
 			isa = PBXGroup;
 			children = (
 				A0558D8E1E8CA442008ECDB7 /* SQLCipherDemo */,
 				A0558D8D1E8CA442008ECDB7 /* Products */,
+				9729AADE0AAFE8B878F89A91 /* Pods */,
+				F3A5E5FA523597008F62D7AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +83,7 @@
 		A0558D8E1E8CA442008ECDB7 /* SQLCipherDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A0558DA61E8CA47F008ECDB7 /* DatabaseService */,
 				A0558D921E8CA442008ECDB7 /* AppDelegate.h */,
 				A0558D931E8CA442008ECDB7 /* AppDelegate.m */,
 				A0558D951E8CA442008ECDB7 /* ViewController.h */,
@@ -79,6 +105,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A0558DA61E8CA47F008ECDB7 /* DatabaseService */ = {
+			isa = PBXGroup;
+			children = (
+				A0558DA71E8CA5C2008ECDB7 /* DSDatabaseEncryptManager.h */,
+				A0558DA81E8CA5C2008ECDB7 /* DSDatabaseEncryptManager.m */,
+				A0558DAA1E8CAB87008ECDB7 /* FMEncryptDatabaseQueue.h */,
+				A0558DAB1E8CAB87008ECDB7 /* FMEncryptDatabaseQueue.m */,
+				A0558DAD1E8CABAC008ECDB7 /* FMEncryptDatabase.h */,
+				A0558DAE1E8CABAC008ECDB7 /* FMEncryptDatabase.m */,
+			);
+			path = DatabaseService;
+			sourceTree = "<group>";
+		};
+		F3A5E5FA523597008F62D7AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5FCE9682706CF2A9EC696 /* libPods-SQLCipherDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0558DA31E8CA442008ECDB7 /* Build configuration list for PBXNativeTarget "SQLCipherDemo" */;
 			buildPhases = (
+				0A11E12A2D64CE49F7C2C2B0 /* [CP] Check Pods Manifest.lock */,
 				A0558D881E8CA442008ECDB7 /* Sources */,
 				A0558D891E8CA442008ECDB7 /* Frameworks */,
 				A0558D8A1E8CA442008ECDB7 /* Resources */,
+				0088441948B96A1EAC763840 /* [CP] Embed Pods Frameworks */,
+				0C550889B7C976F0AFA0D495 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,14 +196,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0088441948B96A1EAC763840 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQLCipherDemo/Pods-SQLCipherDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A11E12A2D64CE49F7C2C2B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0C550889B7C976F0AFA0D495 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQLCipherDemo/Pods-SQLCipherDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0558D881E8CA442008ECDB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A0558D971E8CA442008ECDB7 /* ViewController.m in Sources */,
+				A0558DA91E8CA5C2008ECDB7 /* DSDatabaseEncryptManager.m in Sources */,
 				A0558D941E8CA442008ECDB7 /* AppDelegate.m in Sources */,
 				A0558D911E8CA442008ECDB7 /* main.m in Sources */,
+				A0558DAC1E8CAB87008ECDB7 /* FMEncryptDatabaseQueue.m in Sources */,
+				A0558DAF1E8CABAC008ECDB7 /* FMEncryptDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,10 +374,12 @@
 		};
 		A0558DA41E8CA442008ECDB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD90BA83D7ED5831D3E2F48 /* Pods-SQLCipherDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5MXE45A86T;
 				INFOPLIST_FILE = SQLCipherDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail-dushu.ou.SQLCipherDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,10 +388,12 @@
 		};
 		A0558DA51E8CA442008ECDB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9040D84860ABE5D6DC93EC8 /* Pods-SQLCipherDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5MXE45A86T;
 				INFOPLIST_FILE = SQLCipherDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail-dushu.ou.SQLCipherDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -314,6 +419,7 @@
 				A0558DA51E8CA442008ECDB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
